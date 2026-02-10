@@ -74,7 +74,7 @@ function loadStep3() {
 function startExperience() {
   startMusic();
   step = 1;
-  setTimeout(loadStep1, 600);
+  loadStep1();
 }
 
 function nextStep() {
