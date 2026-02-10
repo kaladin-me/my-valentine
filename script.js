@@ -7,8 +7,8 @@ const noGif = document.getElementById("noGif");
 const noBtn = document.getElementById("noBtn");
 
 // 👉 PASTE YOUR GIF LINKS HERE
-const happyGif = "PASTE_EXCITED_GIF_URL_HERE";
-const sadGif = "PASTE_SAD_GIF_URL_HERE";
+const happyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
+const sadGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
 
 yesGif.src = happyGif;
 noGif.src = sadGif;
