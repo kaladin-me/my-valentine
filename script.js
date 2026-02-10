@@ -10,7 +10,7 @@ const primaryBtn = document.getElementById("primaryBtn");
 const noBtn = document.getElementById("noBtn");
 
 const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicToggle");
+// const musicBtn = document.getElementById("musicToggle");
 
 // 👉 REPLACE WITH YOUR OWN GIF LINKS
 const flirtyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
@@ -143,7 +143,7 @@ function startMusic() {
       }
     }, 100);
 
-    musicBtn.innerText = "🔊";
+    // musicBtn.innerText = "🔊";
     isPlaying = true;
   }
 }
