@@ -6,22 +6,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="card">
-    <h1 id="message">Hey you 💫</h1>
-    <p id="sub">I made something small… just for you.</p>
+    <h1 id="title"></h1>
+    <p id="text"></p>
 
     <div class="stickers">
-      <img id="yesGif" class="gif" src="" />
-      <img id="noGif" class="gif" src="" />
+      <img id="gifMain" class="gif" />
+      <img id="gifAlt" class="gif hidden" />
     </div>
 
     <div class="buttons">
-      <button id="yesBtn" onclick="yes()">Yes 💕</button>
-      <button id="noBtn" onclick="no()">Hmm…</button>
+      <button id="primaryBtn" onclick="nextStep()">Continue 💗</button>
+      <button id="noBtn" class="no hidden" onclick="sayNo()">No 😶</button>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>
