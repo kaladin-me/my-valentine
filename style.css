@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(135deg, #ffdee9, #b5fffc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  background: #ff6f91;
+  color: white;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
