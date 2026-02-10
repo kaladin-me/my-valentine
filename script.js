@@ -1,42 +1,53 @@
-let stage = 0;
+let noCount = 0;
 
-function ask() {
-  const message = document.getElementById("message");
-  const sub = document.getElementById("sub");
-  const buttons = document.querySelector(".buttons");
+const message = document.getElementById("message");
+const sub = document.getElementById("sub");
+const yesGif = document.getElementById("yesGif");
+const noGif = document.getElementById("noGif");
+const noBtn = document.getElementById("noBtn");
 
-  if (stage === 0) {
-    message.innerText = "Will you be my Valentine? 💖";
-    sub.innerText = "";
-    buttons.innerHTML = `
-      <button onclick="yes()">Yes 💕</button>
-      <button onclick="no()">Hmm…</button>
-    `;
-    stage = 1;
-  }
-}
+// 👉 PASTE YOUR GIF LINKS HERE
+const happyGif = "PASTE_EXCITED_GIF_URL_HERE";
+const sadGif = "PASTE_SAD_GIF_URL_HERE";
+
+yesGif.src = happyGif;
+noGif.src = sadGif;
 
 function yes() {
-  const message = document.getElementById("message");
-  const sub = document.getElementById("sub");
-  const buttons = document.querySelector(".buttons");
-
-  message.innerText = "YAY!!! 🎉💘";
+  message.innerText = "YAYYYY 💖🎉";
   sub.innerText = "Feb 14. You & Me. I can’t wait.";
-  buttons.innerHTML = "";
+
+  confetti({
+    particleCount: 150,
+    spread: 90,
+    origin: { y: 0.6 }
+  });
+
+  yesGif.src = happyGif;
+  noGif.style.display = "none";
   document.body.style.background =
-    "linear-gradient(135deg, #fbc2eb, #a6c1ee)";
+    "linear-gradient(135deg, #ff758c, #ff7eb3)";
 }
 
 function no() {
-  const message = document.getElementById("message");
-  const sub = document.getElementById("sub");
-  const buttons = document.querySelector(".buttons");
+  noCount++;
 
   message.innerText = "😔";
-  sub.innerText = "Okay… I’ll just be here, hoping you reconsider.";
-  buttons.innerHTML = `
-    <button onclick="yes()">Okay fine 😌</button>
-    <button onclick="no()">Still thinking…</button>
-  `;
+  sub.innerText =
+    noCount < 3
+      ? "Okay… I’ll be right here if you change your mind."
+      : "Okay okay 😌 I’ll stop asking… maybe.";
+
+  yesGif.src = happyGif;
+  noGif.src = sadGif;
+
+  if (noCount >= 3) {
+    noBtn.addEventListener("mouseover", dodge);
+  }
+}
+
+function dodge() {
+  const x = Math.random() * 200 - 100;
+  const y = Math.random() * 80 - 40;
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
 }
