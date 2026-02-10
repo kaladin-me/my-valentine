@@ -1,53 +1,98 @@
+let step = 1;
 let noCount = 0;
 
-const message = document.getElementById("message");
-const sub = document.getElementById("sub");
-const yesGif = document.getElementById("yesGif");
-const noGif = document.getElementById("noGif");
+const title = document.getElementById("title");
+const text = document.getElementById("text");
+const gifMain = document.getElementById("gifMain");
+const gifAlt = document.getElementById("gifAlt");
+const primaryBtn = document.getElementById("primaryBtn");
 const noBtn = document.getElementById("noBtn");
 
-// 👉 PASTE YOUR GIF LINKS HERE
-const happyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
-const sadGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
+// 👉 REPLACE THESE WITH YOUR OWN GIF LINKS
+const flirtyGif = "PASTE_FLIRTY_GIF_URL";
+const warmGif = "PASTE_WARM_GRATITUDE_GIF_URL";
+const happyGif = "PASTE_EXCITED_GIF_URL";
+const sadGif = "PASTE_SAD_GIF_URL";
 
-yesGif.src = happyGif;
-noGif.src = sadGif;
+loadStep1();
 
-function yes() {
-  message.innerText = "YAYYYY 💖🎉";
-  sub.innerText = "Feb 14. You & Me. I can’t wait.";
+function loadStep1() {
+  title.innerText = "Hey you 💫";
+  text.innerText = "I just wanted to say… you look extra cute today.";
+  gifMain.src = flirtyGif;
+  primaryBtn.innerText = "Tell me more 😌";
+}
+
+function loadStep2() {
+  title.innerText = "Something real 💗";
+  text.innerText =
+    "You make my days softer, my laughs louder,\nand my life better just by being in it.";
+  gifMain.src = warmGif;
+  primaryBtn.innerText = "One more thing…";
+}
+
+function loadStep3() {
+  title.innerText = "So… 💕";
+  text.innerText = "Will you be my Valentine?";
+  gifMain.src = happyGif;
+  gifAlt.src = sadGif;
+  gifAlt.classList.remove("hidden");
+
+  primaryBtn.innerText = "Yes 💖";
+  primaryBtn.onclick = sayYes;
+
+  noBtn.classList.remove("hidden");
+}
+
+function nextStep() {
+  if (step === 1) {
+    step = 2;
+    loadStep2();
+  } else if (step === 2) {
+    step = 3;
+    loadStep3();
+  }
+}
+
+function sayYes() {
+  title.innerText = "YAYYYY 💘🎉";
+  text.innerText =
+    "I’m really grateful for you.\nFeb 14 — you & me.\nI can’t wait.";
+
+  gifMain.src = happyGif;
+  gifAlt.classList.add("hidden");
+  noBtn.classList.add("hidden");
+  primaryBtn.classList.add("hidden");
 
   confetti({
-    particleCount: 150,
+    particleCount: 180,
     spread: 90,
     origin: { y: 0.6 }
   });
 
-  yesGif.src = happyGif;
-  noGif.style.display = "none";
   document.body.style.background =
-    "linear-gradient(135deg, #ff758c, #ff7eb3)";
+    "linear-gradient(135deg, #FF758C, #FF7EB3)";
 }
 
-function no() {
+function sayNo() {
   noCount++;
 
-  message.innerText = "😔";
-  sub.innerText =
+  title.innerText = "😔";
+  text.innerText =
     noCount < 3
-      ? "Okay… I’ll be right here if you change your mind."
-      : "Okay okay 😌 I’ll stop asking… maybe.";
+      ? "Okay… I’ll still be right here."
+      : "Okay okay 😌 I get it… maybe you don’t mean no.";
 
-  yesGif.src = happyGif;
-  noGif.src = sadGif;
+  gifMain.src = sadGif;
+  gifAlt.src = happyGif;
 
   if (noCount >= 3) {
-    noBtn.addEventListener("mouseover", dodge);
+    noBtn.addEventListener("mouseover", dodgeNo);
   }
 }
 
-function dodge() {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 80 - 40;
+function dodgeNo() {
+  const x = Math.random() * 160 - 80;
+  const y = Math.random() * 60 - 30;
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 }
