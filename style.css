@@ -1,30 +1,45 @@
 body {
-  background: linear-gradient(135deg, #ffb6c1, #ffdee9);
+  background: linear-gradient(135deg, #FFE4EC, #FFD1DC);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Arial", sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .card {
-  background: #fff0f5;
-  padding: 30px;
-  border-radius: 25px;
+  background: #FFF5F8;
+  padding: 32px;
+  border-radius: 26px;
+  width: 340px;
   text-align: center;
-  width: 320px;
-  box-shadow: 0 15px 40px rgba(255, 105, 135, 0.4);
+  box-shadow: 0 15px 40px rgba(230, 57, 70, 0.25);
+}
+
+h1 {
+  color: #4A1C2F;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #7A3E55;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .stickers {
+  margin: 18px 0;
   display: flex;
-  justify-content: space-around;
-  margin: 15px 0;
+  justify-content: center;
+  gap: 16px;
 }
 
 .gif {
-  width: 90px;
-  height: auto;
+  width: 100px;
+}
+
+.hidden {
+  display: none;
 }
 
 .buttons {
@@ -32,13 +47,21 @@ body {
 }
 
 button {
-  margin: 10px;
   padding: 10px 22px;
-  border: none;
+  margin: 8px;
   border-radius: 25px;
-  font-size: 16px;
+  border: none;
+  font-size: 15px;
   cursor: pointer;
-  background: #ff4d6d;
+  background: #E63946;
   color: white;
   transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #C9182B;
+}
+
+button.no {
+  background: #F08080;
 }
