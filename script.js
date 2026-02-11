@@ -24,18 +24,21 @@ let maybeStage = 0;
 
 const maybeStages = [
   {
-    text: "Hmmm..? What do you mean?\nShreya, I can’t stop thinking about you.",
-    button: "Hmmm...",
+    title: "Hmmm..? ",
+    text: "What do you mean?\nShreya, I can’t stop thinking about you.",
+    button: "Maybe..",
     gif: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2RibnZ4MTU3eDkxcTM4bWplcThrOHNsaXMyb3N4ZWh4NGZ5OG1xcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vAJFVXa9y91LsYRPY9/giphy.gif"
   },
   {
-    text: "Maybe?? But I love you so muchhhh Shreya 😭💕",
-    button: "Maybe..",
+    title: "Maybe..?? ",
+    text: "But I love you so muchhhh Shreya 😭💕",
+    button: "How much??",
     gif: "https://media1.tenor.com/m/7WyMlRe9-QcAAAAC/cry-sad.gif"
   },
   {
+    title: "So so much!!",
     text: "Love, when it comes to you Shreya, I have oceans of it",
-    button: "How much??",
+    button: "No..",
     gif: "https://media1.tenor.com/m/7WyMlRe9-QcAAAAC/cry-sad.gif"
   }
 ];
@@ -91,7 +94,7 @@ function loadStep3() {
   primaryBtn.onclick = sayYes;
 
   noBtn.classList.remove("hidden");
-  noBtn.innerText = maybeStages[0].button;
+  noBtn.innerText = "Hmmm...";
   noBtn.onclick = handleMaybe;
 
   maybeStage = 0;
@@ -143,6 +146,7 @@ function handleMaybe() {
   if (maybeStage < maybeStages.length) {
     const current = maybeStages[maybeStage];
 
+    title.innerText = current.title;
     text.innerText = current.text;
     noBtn.innerText = current.button;
     gifMain.src = current.gif;
