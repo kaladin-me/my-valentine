@@ -15,7 +15,7 @@ const music = document.getElementById("bgMusic");
 // 👉 REPLACE WITH YOUR OWN GIF LINKS
 const flirtyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
 const warmGif = "https://media1.tenor.com/m/YIRrOK53KKgAAAAd/shibuya-station-haru.gif";
-const happyGif = "https://media1.tenor.com/m/H67cGShC7nQAAAAC/butler-anime.gif";
+const happyGif = "https://media1.tenor.com/m/eDZrsiuxSDQAAAAC/ban-bowing.gif";
 const celebGif = "https://media1.tenor.com/m/l4Kth0iWGA8AAAAC/mwah.gif";
 
 // ---------- CUSTOM STAGES CONFIG ----------
