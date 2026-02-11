@@ -18,6 +18,28 @@ const warmGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3
 const happyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
 const sadGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
 
+// ---------- CUSTOM STAGES CONFIG ----------
+
+let maybeStage = 0;
+
+const maybeStages = [
+  {
+    text: "Hmmm? What do you mean?\nI can’t stop thinking about you.",
+    button: "maybe?",
+    gif: "PASTE_STAGE1_GIF_URL"
+  },
+  {
+    text: "Maybe?? But I love you so muchhhh 😭💕",
+    button: "still unsure?",
+    gif: "PASTE_STAGE2_GIF_URL"
+  },
+  {
+    text: "Are you testing me right now? 😌\nBecause I’m not giving up.",
+    button: "try again 😏",
+    gif: "PASTE_STAGE3_GIF_URL"
+  }
+];
+
 // ---------- STEP LOADERS ----------
 
 loadStep0();
@@ -55,18 +77,24 @@ function loadStep2() {
   primaryBtn.innerText = "Jaldi Bataoooo 😤";
 }
 
+// ---------- STEP 3 ----------
+
 function loadStep3() {
   fadeContent();
-  title.innerText = "Your Highness 🧎‍♂️";
+
+  title.innerText = "My Lady 🧎‍♂️";
   text.innerText = "Would you grace me with your hand and be my Valentine forever?";
+
   gifMain.src = happyGif;
-  gifAlt.src = sadGif;
-  gifAlt.classList.remove("hidden");
 
   primaryBtn.innerText = "Yes 💖";
   primaryBtn.onclick = sayYes;
 
   noBtn.classList.remove("hidden");
+  noBtn.innerText = maybeStages[0].button;
+  noBtn.onclick = handleMaybe;
+
+  maybeStage = 0;
 }
 
 // ---------- FLOW CONTROL ----------
@@ -96,7 +124,6 @@ function sayYes() {
     "I love you so much\nI’m really grateful for you.\nFeb 14 — you & me.\nI can’t wait.";
 
   gifMain.src = happyGif;
-  gifAlt.classList.add("hidden");
   noBtn.classList.add("hidden");
   primaryBtn.classList.add("hidden");
 
@@ -108,6 +135,55 @@ function sayYes() {
 
   document.body.style.background =
     "linear-gradient(135deg, #FF758C, #FF7EB3)";
+}
+
+function handleMaybe() {
+  fadeContent();
+
+  if (maybeStage < maybeStages.length) {
+    const current = maybeStages[maybeStage];
+
+    text.innerText = current.text;
+    noBtn.innerText = current.button;
+    gifMain.src = current.gif;
+
+    maybeStage++;
+
+    // Start dodging after last defined stage
+    if (maybeStage >= maybeStages.length) {
+      noBtn.addEventListener("mouseover", dodgeNo);
+    }
+  }
+}
+
+// ---------- MAYBE LOOP ----------
+
+function sayMaybe() {
+  noCount++;
+
+  fadeContent();
+
+  if (noCount === 1) {
+    text.innerText =
+      "Hmmm? What do you mean?\nI can’t stop thinking about you.";
+    noBtn.innerText = "maybe?";
+  }
+
+  else if (noCount === 2) {
+    text.innerText =
+      "Maybe?? But I love you so muchhhh 😭💕";
+    noBtn.innerText = "still thinking…";
+  }
+
+  else if (noCount >= 3) {
+    text.innerText =
+      "Okay okay 😌 I see how it is…\nbut that button looks tired of running.";
+    noBtn.innerText = "try catching me 😏";
+
+    noBtn.addEventListener("mouseover", dodgeNo);
+  }
+
+  gifMain.src = sadGif;
 }
 
 function sayNo() {
