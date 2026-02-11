@@ -24,41 +24,41 @@ loadStep0();
 
 function loadStep0() {
   fadeContent();
-  title.innerText = "hey.";
+  title.innerText = "Heyyyy Shreya!! 👋";
   text.innerText = "";
   gifMain.classList.add("hidden");
   gifAlt.classList.add("hidden");
   noBtn.classList.add("hidden");
 
-  primaryBtn.innerText = "hey back";
+  primaryBtn.innerText = "Hiiiii 💃";
   primaryBtn.onclick = startExperience;
 }
 
 function loadStep1() {
   fadeContent();
-  title.innerText = "Hey you 💫";
-  text.innerText = "I just wanted to say… you look extra cute today.";
+  title.innerText = "Soooo 👉👈";
+  text.innerText = "I wanted to talk to you about something special...";
   gifMain.src = flirtyGif;
   gifMain.classList.remove("hidden");
 
-  primaryBtn.innerText = "tell me more 😌";
+  primaryBtn.innerText = "What is it? 🧐";
   primaryBtn.onclick = nextStep;
 }
 
 function loadStep2() {
   fadeContent();
-  title.innerText = "Something real 💗";
+  title.innerText = "Are Ruko Thoda 😋";
   text.innerText =
-    "You make my days softer,\nmy laughs louder,\nand my life better just by being in it.";
+    "Pehle thoda bhaav khalu...\nFir batata hu";
   gifMain.src = warmGif;
 
-  primaryBtn.innerText = "one more thing…";
+  primaryBtn.innerText = "Jaldi Bataoooo 😤";
 }
 
 function loadStep3() {
   fadeContent();
-  title.innerText = "So… 💕";
-  text.innerText = "Will you be my Valentine?";
+  title.innerText = "Your Highness 🧎‍♂️";
+  text.innerText = "Would you grace me with your hand and be my Valentine forever?";
   gifMain.src = happyGif;
   gifAlt.src = sadGif;
   gifAlt.classList.remove("hidden");
@@ -93,7 +93,7 @@ function sayYes() {
   fadeContent();
   title.innerText = "YAYYYY 💘🎉";
   text.innerText =
-    "I’m really grateful for you.\nFeb 14 — you & me.\nI can’t wait.";
+    "I love you so much\nI’m really grateful for you.\nFeb 14 — you & me.\nI can’t wait.";
 
   gifMain.src = happyGif;
   gifAlt.classList.add("hidden");
