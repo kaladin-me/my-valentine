@@ -16,7 +16,7 @@ const music = document.getElementById("bgMusic");
 const flirtyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
 const warmGif = "https://media1.tenor.com/m/YIRrOK53KKgAAAAd/shibuya-station-haru.gif";
 const happyGif = "https://media1.tenor.com/m/H67cGShC7nQAAAAC/butler-anime.gif";
-const sadGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
+const celebGif = "https://media1.tenor.com/m/l4Kth0iWGA8AAAAC/mwah.gif";
 
 // ---------- CUSTOM STAGES CONFIG ----------
 
@@ -24,22 +24,28 @@ let maybeStage = 0;
 
 const maybeStages = [
   {
-    title: "Hmmm..? ",
-    text: "What do you mean?\nShreya, I can’t stop thinking about you.",
+    title: "Hmmm..? 🥺",
+    text: "What do you mean - hmmm?\nShreya, I can’t stop thinking about you.",
     button: "Maybe..",
     gif: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2RibnZ4MTU3eDkxcTM4bWplcThrOHNsaXMyb3N4ZWh4NGZ5OG1xcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vAJFVXa9y91LsYRPY9/giphy.gif"
   },
   {
-    title: "Maybe..?? ",
+    title: "Maybe..?? 😨",
     text: "But I love you so muchhhh Shreya 😭💕",
     button: "How much??",
     gif: "https://media1.tenor.com/m/7WyMlRe9-QcAAAAC/cry-sad.gif"
   },
   {
-    title: "So so much!!",
-    text: "Love, when it comes to you Shreya, I have oceans of it",
+    title: "So so much!! ",
+    text: "Love, when it comes to you Shreya, I have oceans of it!!",
+    button: "Uh-huh",
+    gif: "https://media1.tenor.com/m/g_8YC3QNqAAAAAAd/good-morning-2025.gif"
+  },
+  {
+    title: "Aaaand... 😍",
+    text: "I won't let anything come betweeen us",
     button: "No..",
-    gif: "https://media1.tenor.com/m/7WyMlRe9-QcAAAAC/cry-sad.gif"
+    gif: "https://media1.tenor.com/m/7mGmw-GJs4IAAAAC/rage-power.gif"
   }
 ];
 
@@ -124,9 +130,9 @@ function sayYes() {
   fadeContent();
   title.innerText = "YAYYYY 💘🎉";
   text.innerText =
-    "I love you so much\nI’m really grateful for you.\nFeb 14 — you & me.\nI can’t wait.";
+    "I’m really grateful for you.\nFeb 14 — you & me.\nI can’t wait.";
 
-  gifMain.src = happyGif;
+  gifMain.src = celebGif;
   noBtn.classList.add("hidden");
   primaryBtn.classList.add("hidden");
 
