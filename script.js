@@ -9,6 +9,7 @@ const gifAlt = document.getElementById("gifAlt");
 const primaryBtn = document.getElementById("primaryBtn");
 const noBtn = document.getElementById("noBtn");
 
+
 const music = document.getElementById("bgMusic");
 // const musicBtn = document.getElementById("musicToggle");
 
