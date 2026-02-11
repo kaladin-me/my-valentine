@@ -14,8 +14,8 @@ const music = document.getElementById("bgMusic");
 
 // 👉 REPLACE WITH YOUR OWN GIF LINKS
 const flirtyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
-const warmGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
-const happyGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
+const warmGif = "https://media1.tenor.com/m/YIRrOK53KKgAAAAd/shibuya-station-haru.gif";
+const happyGif = "https://media1.tenor.com/m/H67cGShC7nQAAAAC/butler-anime.gif";
 const sadGif = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp3eGsyYXQ4Y3p1Ymtnd2xsZnM4d3pmMjVoOHAweXVwOHI5bGFjdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Aa7LPlzUFSHyiKkmHg/giphy.gif";
 
 // ---------- CUSTOM STAGES CONFIG ----------
@@ -24,19 +24,19 @@ let maybeStage = 0;
 
 const maybeStages = [
   {
-    text: "Hmmm? What do you mean?\nI can’t stop thinking about you.",
-    button: "maybe?",
-    gif: "PASTE_STAGE1_GIF_URL"
+    text: "Hmmm..? What do you mean?\nShreya, I can’t stop thinking about you.",
+    button: "Hmmm...",
+    gif: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2RibnZ4MTU3eDkxcTM4bWplcThrOHNsaXMyb3N4ZWh4NGZ5OG1xcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vAJFVXa9y91LsYRPY9/giphy.gif"
   },
   {
-    text: "Maybe?? But I love you so muchhhh 😭💕",
-    button: "still unsure?",
-    gif: "PASTE_STAGE2_GIF_URL"
+    text: "Maybe?? But I love you so muchhhh Shreya 😭💕",
+    button: "Maybe..",
+    gif: "https://media1.tenor.com/m/7WyMlRe9-QcAAAAC/cry-sad.gif"
   },
   {
-    text: "Are you testing me right now? 😌\nBecause I’m not giving up.",
-    button: "try again 😏",
-    gif: "PASTE_STAGE3_GIF_URL"
+    text: "Love, when it comes to you Shreya, I have oceans of it",
+    button: "How much??",
+    gif: "https://media1.tenor.com/m/7WyMlRe9-QcAAAAC/cry-sad.gif"
   }
 ];
 
